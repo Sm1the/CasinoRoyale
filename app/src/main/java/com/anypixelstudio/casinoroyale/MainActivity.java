@@ -7,12 +7,19 @@ import android.view.animation.Animation;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
     ImageView spinWheel;
+    TextView setUserMoney;
+    TextView setStake;
+    int userMoney = 100;
+    int userStake = 10;
+    int Stake = 10;
     Random random;
     int degree = 0, degree_old = 0;
 
@@ -21,8 +28,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        random = new Random();
         spinWheel = findViewById(R.id.iv_SpinWheel);
+        setUserMoney = findViewById(R.id.tv_Money);
+        setStake = findViewById(R.id.tv_Stake);
+
+        random = new Random();
+        setUserMoney.setText("Счет : "+userMoney+" $");
 
     }
 
@@ -50,5 +61,31 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         spinWheel.startAnimation(rotateAnimation);
+    }
+
+    public void plusStake(View view){
+        if (userStake < userMoney){
+            userStake = userStake + Stake;
+            setStake.setText(userStake+"");
+        }else{
+            Toast.makeText(MainActivity.this, "У нас недостаточно средств!",
+                    Toast.LENGTH_LONG).show();
+        }
+
+    }
+
+    public void minusStake(View view){
+        if (userStake > Stake){
+            userStake = userStake - Stake;
+            setStake.setText(userStake+"");
+
+        }else{
+           Toast.makeText(MainActivity.this, "Минимальная ставка 10$",
+                    Toast.LENGTH_LONG).show();
+            userStake = 10;
+            setStake.setText("10");
+        }
+
+
     }
 }
