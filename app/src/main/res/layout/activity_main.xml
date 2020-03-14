@@ -34,16 +34,11 @@
         android:id="@+id/iv_Pointer"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.19"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07999998"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_SpinWheel"
+        app:layout_constraintEnd_toEndOf="@+id/iv_SpinWheel"
+        app:layout_constraintStart_toStartOf="@+id/iv_SpinWheel"
+        app:layout_constraintTop_toTopOf="@+id/iv_SpinWheel"
+        app:layout_constraintVertical_bias="0.19"
         app:srcCompat="@drawable/point" />
 
     <ImageView
@@ -110,6 +105,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:onClick="Setting"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -168,5 +164,101 @@
         app:layout_constraintEnd_toEndOf="@+id/iv_Field"
         app:layout_constraintStart_toStartOf="@+id/iv_Field"
         app:layout_constraintTop_toTopOf="@+id/iv_Field" />
+
+    <ImageView
+        android:id="@+id/iv_Lower"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:onClick="setNumberLower"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_Table"
+        app:layout_constraintEnd_toEndOf="@+id/iv_Table"
+        app:layout_constraintHorizontal_bias="0.387"
+        app:layout_constraintStart_toStartOf="@+id/iv_Table"
+        app:layout_constraintTop_toTopOf="@+id/iv_Table"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/iv_Upper"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:onClick="setNumberUpper"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_Table"
+        app:layout_constraintEnd_toEndOf="@+id/iv_Table"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/iv_Table"
+        app:layout_constraintTop_toTopOf="@+id/iv_Table"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/iv_Even"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:onClick="setNumberEven"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_Table"
+        app:layout_constraintEnd_toEndOf="@+id/iv_Table"
+        app:layout_constraintHorizontal_bias="0.387"
+        app:layout_constraintStart_toStartOf="@+id/iv_Table"
+        app:layout_constraintTop_toTopOf="@+id/iv_Table"
+        app:layout_constraintVertical_bias="0.495" />
+
+    <ImageView
+        android:id="@+id/iv_Odd"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:onClick="setNumberOdd"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_Table"
+        app:layout_constraintEnd_toEndOf="@+id/iv_Table"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/iv_Table"
+        app:layout_constraintTop_toTopOf="@+id/iv_Table"
+        app:layout_constraintVertical_bias="0.495" />
+
+    <ImageView
+        android:id="@+id/iv_Red"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:onClick="setNuberRed"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_Table"
+        app:layout_constraintEnd_toEndOf="@+id/iv_Table"
+        app:layout_constraintHorizontal_bias="0.387"
+        app:layout_constraintStart_toStartOf="@+id/iv_Table"
+        app:layout_constraintTop_toTopOf="@+id/iv_Table"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/iv_Black"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:onClick="setNumberBlack"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_Table"
+        app:layout_constraintEnd_toEndOf="@+id/iv_Table"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/iv_Table"
+        app:layout_constraintTop_toTopOf="@+id/iv_Table"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/iv_Zero"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:onClick="setNumberDoubleZero"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_Table"
+        app:layout_constraintEnd_toEndOf="@+id/iv_Table"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/iv_Table"
+        app:layout_constraintTop_toTopOf="@+id/iv_Table"
+        app:layout_constraintVertical_bias="0.234" />
+
+    <ImageView
+        android:id="@+id/iv_DoubleZero"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:onClick="setNumberZero"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_Table"
+        app:layout_constraintEnd_toEndOf="@+id/iv_Table"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/iv_Table"
+        app:layout_constraintTop_toTopOf="@+id/iv_Table"
+        app:layout_constraintVertical_bias="0.782" />
 
 </android.support.constraint.ConstraintLayout>
